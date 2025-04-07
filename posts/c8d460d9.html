@@ -1,0 +1,403 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>【工作日记DAY01】TFT/LCD产品特性学习 | Pirrow love you!!!</title><meta name="author" content="Pirrow"><meta name="copyright" content="Pirrow"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、简介 TFT LCD全称：Thin-Film Transistor Liquid Crystal Display，薄膜晶体管液晶显示屏。是一种采用薄膜晶体管（TFT） 技术来控制液晶像素的液晶显示屏（LCD）  1. TFT LCD 的基本工作原理 1.1 LCD（液晶显示）的核心概念   TFT LCD 属于 主动矩阵液晶显示技术，其基本原理依赖于 液晶（Liquid Crystal） 的特">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【工作日记DAY01】TFT&#x2F;LCD产品特性学习">
+<meta property="og:url" content="http://example.com/posts/c8d460d9.html">
+<meta property="og:site_name" content="Pirrow love you!!!">
+<meta property="og:description" content="一、简介 TFT LCD全称：Thin-Film Transistor Liquid Crystal Display，薄膜晶体管液晶显示屏。是一种采用薄膜晶体管（TFT） 技术来控制液晶像素的液晶显示屏（LCD）  1. TFT LCD 的基本工作原理 1.1 LCD（液晶显示）的核心概念   TFT LCD 属于 主动矩阵液晶显示技术，其基本原理依赖于 液晶（Liquid Crystal） 的特">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/l.gif">
+<meta property="article:published_time" content="2025-03-27T07:14:44.000Z">
+<meta property="article:modified_time" content="2025-04-05T11:33:01.012Z">
+<meta property="article:author" content="Pirrow">
+<meta property="article:tag" content="博客,pirrow,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/l.gif"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "【工作日记DAY01】TFT/LCD产品特性学习",
+  "url": "http://example.com/posts/c8d460d9.html",
+  "image": "http://example.com/img/l.gif",
+  "datePublished": "2025-03-27T07:14:44.000Z",
+  "dateModified": "2025-04-05T11:33:01.012Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Pirrow",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/posts/c8d460d9.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="manifest" href="/null"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '【工作日记DAY01】TFT/LCD产品特性学习',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(https://s2.loli.net/2025/02/12/HNMTixAJ7Vdvzta.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/l.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Pirrow love you!!!</span></a><a class="nav-page-title" href="/"><span class="site-name">【工作日记DAY01】TFT/LCD产品特性学习</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/bangumis/index.html"><i class="fa-fw fas fa-home"></i><span> 追番</span></a></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">【工作日记DAY01】TFT/LCD产品特性学习</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-03-27T07:14:44.000Z" title="发表于 2025-03-27 15:14:44">2025-03-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-04-05T11:33:01.012Z" title="更新于 2025-04-05 19:33:01">2025-04-05</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 class="custom-title">一、简介</h1>
+TFT LCD全称：Thin-Film Transistor Liquid Crystal Display，薄膜晶体管液晶显示屏。是一种采用薄膜晶体管（TFT）
+技术来控制液晶像素的液晶显示屏（LCD）<br>
+<br>
+1. TFT LCD 的基本工作原理<br>
+1.1 LCD（液晶显示）的核心概念  <br>
+TFT LCD 属于 主动矩阵液晶显示技术，其基本原理依赖于 液晶（Liquid Crystal） 的特性。液晶是一种介于固态和液态之间的物质，它的分子排列可以受到电场的影响，从而改变通过它的光的偏振方向。 <br> 
+<br>
+1.2 TFT LCD 的核心组成<br>
+TFT LCD 主要由以下几层结构组成：<br>
+背光源（Backlight）：提供光源，因为液晶本身不会发光。<br>
+偏振片（Polarizer）：调整光的偏振方向。<br>
+TFT 层（薄膜晶体管层）：为每个像素提供单独的控制电路。<br>
+液晶层（Liquid Crystal Layer）：通过电场控制光的透过量，形成不同的亮度和颜色。
+彩色滤光片（Color Filter）：由红（R）、绿（G）、蓝（B）三种颜色的子像素组成，实现全彩显示。<br>
+<br>
+2. TFT 的作用<br>
+TFT（Thin-Film Transistor）是一种特殊的 场效应晶体管（FET），它被制作在玻璃基板上，并用于单独控制每个像素的通断。每个像素点都由一个 TFT 管控制，因此：<br>
+响应速度更快，画面切换流畅。<br>
+色彩更稳定，不会出现鬼影或拖影。<br>
+精确控制亮度，提高对比度。<br>
+在 TFT LCD 中，每个像素包含 3 个子像素（R、G、B），每个子像素都由一个独立的 TFT 控制。TFT 的作用是 开关像素的通断，并控制液晶旋转的角度，从而决定光线的透射量，实现不同的颜色和亮度变化。<br>
+<br>
+3. TFT LCD 的工作过程<br>
+3.1 主要步骤<br>
+背光源发光（通常是 LED 背光）。<br>
+光线通过第一个偏振片，变成单一偏振方向的光。<br>
+TFT 控制液晶层的状态：<br>
+施加电压时，液晶分子会改变排列方向，影响光的透过率。<br>
+不施加电压时，液晶维持原来的状态，光线无法通过。<br>
+光线通过彩色滤光片，形成红、绿、蓝 3 种颜色的像素点。<br>
+光线经过第二个偏振片和玻璃层，最终形成可见图像。<br>
+<br>
+4. TFT LCD 的优点<br>
+✅ 响应速度快：比传统的被动矩阵 LCD（如 STN-LCD）快得多，不容易出现残影或拖影。<br>
+✅ 高对比度和亮度：由于像素可以独立控制，显示效果更清晰。<br>
+✅ 色彩丰富：TFT LCD 能够显示更广的色域，适合多媒体应用。<br>
+✅ 适用于大尺寸显示屏：TFT 技术可以应用于不同尺寸的屏幕，包括手机、电脑、电视等。<br>
+<br>
+5. TFT LCD 的缺点<br>
+❌ 功耗较高：因为每个像素都有独立的 TFT 开关，功耗比传统 LCD 略高。<br>
+❌ 制造成本较高：需要复杂的半导体制造工艺。<br>
+❌ 可视角度较小（部分型号）：早期的 TFT LCD 屏幕在斜角观看时颜色会发生变化，不过现在的 IPS 技术已经改善了这一问题。<br>
+<br>
+<br><br>
+<h1 class="custom-title">二、TFT LCD 显示器的应用分类</h1><br>
+1. Projection Transistor（投影型晶体管显示）<br>
+这一类型主要用于 投影显示设备，如 LCD 投影仪。它的工作方式如下：<br>
+使用高亮度光源透射通过 TFT LCD 面板。<br>
+光经过 放大镜头系统，被投影到更大的屏幕上。<br>
+主要用于 投影仪、虚拟现实（VR）头显、商业显示系统 等。<br>
+<br>
+优点：<br>
+✅ 能够投影到大型屏幕，适用于会议、影院、教育场景。<br>
+✅ 分辨率高，适合高清画面呈现。<br>
+✅ 颜色表现较好，能够提供较高的对比度。<br>
+<br>
+缺点：<br>
+❌ 需要额外的光源，功耗较大。<br>
+❌ 设备体积较大，不如便携式显示器灵活。<br>
+<br>
+2. Direct View Type（直视型）<br>
+这是最常见的 TFT LCD 类型，应用于手机、笔记本电脑、电视、显示器等设备。<br>
+采用 背光源（LED 背光或 CCFL 背光） 提供光源。<br>
+通过 TFT 控制液晶排列 以调整光线透过率，从而显示画面。<br>
+适用于 日常电子设备，如智能手机、电脑屏幕、电视、平板 等。<br>
+<br>
+优点：<br>
+✅ 画面清晰、色彩丰富，适合日常使用。<br>
+✅ 分辨率可以做得很高，支持 4K、8K 显示。<br>
+✅ 生产工艺成熟，成本较低。<br>
+<br>
+缺点：<br>
+❌ 需要背光，功耗较高。<br>
+❌ 可视角度可能较小（但 IPS 面板可改进此问题）。<br>
+<br>
+3. Reflective Type（反射型）<br>
+这一类型的 TFT LCD 不需要背光，而是利用外部环境光反射 来形成图像。<br>
+采用 反射板（Reflective Layer），光线从环境进入 LCD 层，然后反射回用户眼睛。<br>
+主要用于 低功耗设备，如电子书（E-Ink 之外的 LCD 方案）、部分手表、工业仪表 等。<br>
+<br>
+优点：<br>
+✅ 超低功耗，适合长时间显示内容的设备。<br>
+✅ 强光下可视性好，在户外阳光下依然清晰可见。<br>
+<br>
+缺点：<br>
+❌ 颜色较暗淡，色彩表现较差。<br>
+❌ 在光线不足的环境下可读性差（因为没有背光）。<br>
+<br>
+4. Trans-Reflective Type（半透半反型）<br>
+这种类型结合了 直视型（Direct View）和反射型（Reflective） 的特点，既可以使用背光，也可以反射环境光。<br>
+在亮光环境下，依靠 环境光反射 来节能。<br>
+在黑暗环境下，使用 背光 来显示内容。<br>
+主要用于 智能手表、户外仪器、GPS 导航设备 等。<br>
+<br>
+优点：<br>
+✅ 在强光环境下表现优秀，适合户外使用。<br>
+✅ 结合了直视型和反射型的优势，可在不同光照条件下提供较好的可视性。<br>
+✅ 功耗较低，比普通直视型 LCD 更省电。<br>
+<br>
+缺点：<br>
+❌ 对比度较低，显示效果可能不如直视型 LCD。<br>
+❌ 生产成本比普通 LCD 稍高。<br>
+<br>
+<h1 class="custom-title">三、TFT LCD的scan line 和 data line 是如何工作的？</h1>
+
+<p>3.1结构</p>
+<p>在 TFT LCD（薄膜晶体管液晶显示屏） 中，每个像素 由一个 TFT（薄膜晶体管）开关 控制，而这些像素是按照行（Row）和列（Column）排列的，形成一个 像素矩阵（Pixel Matrix）。</p>
+<p>Scan Line（扫描线）：连接到行驱动电路（Row Driver）控制哪一行的像素被激活（选通）。</p>
+<p>Data Line（数据信号线）：连接到列驱动电路（Column Driver）提供该行每个像素的颜色（R/G/B）和亮度数据。</p>
+<p>TFT LCD 的像素矩阵结构<br>每个像素由 TFT 开关 + 液晶单元 + 存储电容 组成，如下图所示：</p>
+<p> ┌───────────────────────┐<br> │   Data Line (列)      │<br> ├─┬─────┬─────┬─────┬──┤<br> │ │ TFT │ TFT │ TFT │  │   ← 第 1 行（Scan Line 1）<br> │ ├─────┼─────┼─────┤<br> │ │ TFT │ TFT │ TFT │  │   ← 第 2 行（Scan Line 2）<br> │ ├─────┼─────┼─────┤<br> │ │ TFT │ TFT │ TFT │  │   ← 第 3 行（Scan Line 3）<br> └─┴─────┴─────┴─────┴──┘</p>
+<p>3.2协同工作流程以及示例<br>TFT LCD 采用逐行扫描（Row Scanning）的方式来更新屏幕上的图像。</p>
+<p>工作流程：<br>1.扫描线（Scan Line）逐行开启像素<br>只有被选中的那一行的 TFT 开关打开，允许该行的像素接收数据。<br>其他行的 TFT 开关关闭，不会受到影响。</p>
+<p>2.数据线（Data Line）传输颜色数据<br>列驱动电路会把 R/G/B 信号 送到当前被选中的行的每个像素。<br>这个数据代表该像素的亮度（灰阶）或颜色（RGB 组合）。</p>
+<p>3.电压存储在像素电容中<br>每个像素都有一个小电容，负责存储电压，以便在下一次刷新前保持画面不变。<br>当 TFT 关闭时，电容保持电荷，液晶状态保持不变。</p>
+<p>4.扫描下一行<br>当前行写入完成后，扫描电路选择下一行，重复上述过程，直到所有行都更新完毕。</p>
+<p><h1 class="custom-title">四、为什么会有两层偏光板？CF?LC cell？</h1></p>
+<ol>
+<li>背光层（Backlight / Light Guide，导光板）<br>光线状态：未偏振的白光<br>光源：通常是 LED 背光（白色光）。</li>
+</ol>
+<p>作用：<br>提供均匀的白色光源。<br>通过导光板（Light Guide）和扩散层（Diffuser）均匀分布光线，避免亮度不均匀。</p>
+<p>光线变化：<br>初始光线是无偏振的，即光的振动方向是随机的。<br>颜色是白色（RGB 光的混合）。</p>
+<p>2.下偏光片（Polarizer）<br>光线状态：线偏振的白光<br>作用：<br>让未偏振的光变成线偏振光（振动方向统一）。</p>
+<p>光线变化：<br>只有与偏光片方向一致的光可以通过，其他方向的光被吸收。<br>结果是线偏振白光（仍然是白色，但方向固定）。</p>
+<p>3.TFT + LC Cell（液晶层）<br>光线状态：偏振方向被调制的白光<br>TFT（薄膜晶体管）：<br>TFT 作为开关，决定是否对该像素施加电压。</p>
+<p>LC Cell（液晶层）：<br>通过电压调节液晶分子的排列，从而控制光的偏振方向。</p>
+<p>无电压时：<br>液晶分子呈螺旋状排列，使光线的偏振方向旋转 90°。</p>
+<p>施加电压时：<br>液晶分子被拉直，不改变光的偏振方向。</p>
+<p>光线变化：<br>偏振方向可能旋转 0°~90°，决定了最终透光量（亮度）。</p>
+<p>4.CF（Color Filter，彩色滤光片）<br>光线状态：RGB 颜色 + 偏振方向已调制<br>作用：<br>过滤出所需的颜色（R / G / B）。</p>
+<p>光线变化：<br>通过 R / G / B 子像素，只允许某个颜色的光通过。</p>
+<p>例如：<br>如果像素应该是红色，那么只允许红光通过，吸收绿光和蓝光。</p>
+<p>5.上偏光片（Polarizer）<br>光线状态：最终透射量决定亮度<br>作用：<br>进一步控制光线的通过量，形成最终的像素亮度。</p>
+<p>光线变化：<br>如果液晶旋转了 90°，光的偏振方向与上偏光片一致，光线可以通过（像素亮）。<br>如果液晶未旋转光的方向，光线被吸收（像素暗）。<br>通过调节旋转角度（0°-90°），控制亮度等级（灰阶）。</p>
+<p>6.结果：彩色像素形成最终图像<br>每个像素由 RGB 三个子像素 组成。<br>通过调整每个子像素的亮度，混合出不同的颜色。<br>最终的图像出现在 LCD 屏幕上。<br><br></p>
+<p><h1 class="custom-title">五、TFT-LCD信号输入原理是怎样的？（跳过，明天看）</h1></p>
+<p><h1 class="custom-title">六、TFT-LCD产品规格特性</h1><br>规格汇总：以M170E5-L05为例<br>Size—————————尺寸<br>Color depth—————-色彩深度<br>Resolution——————解析度<br>Contrast ratio————对比<br>Brightness——————亮度<br>Viewing angle————-可视角<br>Response Time————-反应时间<br>Backlight——————-灯管数<br>Power Consumption——-耗电量<br>Signal input—————输入信号模式</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Pirrow</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/posts/c8d460d9.html">http://example.com/posts/c8d460d9.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Pirrow love you!!!</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/l.gif" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/l.gif" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Pirrow</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">一、简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">二、TFT LCD 显示器的应用分类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">三、TFT LCD的scan line 和 data line 是如何工作的？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">四、为什么会有两层偏光板？CF?LC cell？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">五、TFT-LCD信号输入原理是怎样的？（跳过，明天看）</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">六、TFT-LCD产品规格特性</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e99b56b8.html" title="【工作日记DAY06】">【工作日记DAY06】</a><time datetime="2025-04-03T08:33:10.000Z" title="发表于 2025-04-03 16:33:10">2025-04-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/ac1ab2b2.html" title="【工作日记DAY05】解决前段时间遗留问题">【工作日记DAY05】解决前段时间遗留问题</a><time datetime="2025-04-01T09:58:27.000Z" title="发表于 2025-04-01 17:58:27">2025-04-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/7fb73b6d.html" title="【工作日记DAY04】郑州七号线车载乘客信息显示系统实验大纲（EMC电磁兼容测试）">【工作日记DAY04】郑州七号线车载乘客信息显示系统实验大纲（EMC电磁兼容测试）</a><time datetime="2025-04-01T00:23:20.000Z" title="发表于 2025-04-01 08:23:20">2025-04-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/d43f4cb7.html" title="【工作日记DAY03】规格书TS430H1">【工作日记DAY03】规格书TS430H1</a><time datetime="2025-03-30T20:14:24.000Z" title="发表于 2025-03-31 04:14:24">2025-03-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/da0a5b02.html" title="【工作日记DAY02】产品规格参数的理解">【工作日记DAY02】产品规格参数的理解</a><time datetime="2025-03-28T01:24:31.000Z" title="发表于 2025-03-28 09:24:31">2025-03-28</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Pirrow</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><div class="aplayer no-destroy" data-id="12269930353" data-server="netease" data-type="playlist"   data-order="list" data-fixed="true" data-preload="auto" data-autoplay="false" data-mutex="true" ></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/metingjs/dist/Meting.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div><div class="app-refresh" id="app-refresh" style="position: fixed;top: -2.2rem;left: 0;right: 0;z-index: 99999;padding: 0 1rem;font-size: 15px;height: 2.2rem;transition: all 0.3s ease;"><div class="app-refresh-wrap" style=" display: flex;color: #fff;height: 100%;align-items: center;justify-content: center;"><label>✨ 有新文章啦！ 👉</label><a href="javascript:void(0)" onclick="location.reload()"><span style="color: #fff;text-decoration: underline;cursor: pointer;">🍗点击食用🍔</span></a></div></div><script>if ('serviceWorker' in navigator) {
+if (navigator.serviceWorker.controller) {
+navigator.serviceWorker.addEventListener('controllerchange', function() {
+showNotification()
+})
+}
+window.addEventListener('load', function() {
+navigator.serviceWorker.register('/sw.js')
+})
+}
+function showNotification() {
+if (GLOBAL_CONFIG.Snackbar) {
+var snackbarBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+GLOBAL_CONFIG.Snackbar.bgLight :
+GLOBAL_CONFIG.Snackbar.bgDark
+var snackbarPos = GLOBAL_CONFIG.Snackbar.position
+Snackbar.show({
+text: '✨ 有新文章啦！ 👉',
+backgroundColor: snackbarBg,
+duration: 500000,
+pos: snackbarPos,
+actionText: '🍗点击食用🍔',
+actionTextColor: '#fff',
+onActionClick: function(e) {
+location.reload()0
+},
+})
+} else {
+var showBg =
+document.documentElement.getAttribute('data-theme') === 'light' ?
+'#3b70fc' :
+'#1f1f1f'
+var cssText = `top: 0; background: ${showBg};`
+document.getElementById('app-refresh').style.cssText = cssText
+}
+}</script></div><!-- hexo injector body_end start --><script>
+    // 全局变量声明区域
+    var fdata = {
+      apiurl: 'https://hexo-friendcircle-api-ai9d4hwad-anzhiyu-c.vercel.app/api',
+      initnumber: 20, //【可选】页面初始化展示文章数量
+      stepnumber: 10, //【可选】每次加载增加的篇数
+      error_img: 'https://npm.elemecdn.com/akilar-candyassets/image/404.gif' //【可选，头像图片加载失败时的默认头像】
+    }
+    //存入本地存储
+    localStorage.setItem("fdatalist",JSON.stringify(fdata))
+    </script>
+    <script defer src="https://npm.elemecdn.com/hexo-filter-fcircle/assets/js/fetch.min.js"></script><script async src="//at.alicdn.com/t/font_2032782_8d5kxvn09md.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('flink-list-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('article-sort-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__slideInRight');
+    arr[i].setAttribute('data-wow-duration', '1.5s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__flipInY');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script><script async="async">var arr = document.getElementsByClassName('site-card');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__animated');
+    arr[i].setAttribute('data-wow-duration', '3s');
+    arr[i].setAttribute('data-wow-delay', '');
+    arr[i].setAttribute('data-wow-offset', '');
+    arr[i].setAttribute('data-wow-iteration', '');
+  }</script></div><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://cdn.cbd.int/hexo-butterfly-wowjs/lib/wow_init.js"></script><!-- hexo injector body_end end --></body></html>

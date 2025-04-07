@@ -4,6 +4,84 @@
   
     
     <entry>
+      <title>【工作日记DAY06】</title>
+      <link href="/posts/e99b56b8.html"/>
+      <url>/posts/e99b56b8.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【工作日记DAY05】解决前段时间遗留问题</title>
+      <link href="/posts/ac1ab2b2.html"/>
+      <url>/posts/ac1ab2b2.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 class="custom-title">一、TS430时序表格ColorDataInputAssignment的理</h1><p>1.三原色分别为红，绿，蓝<br>每颗像素，每种颜色由三个数据控制，每个数据是由以8个bit为单位的二进制数据构成。<br>红：R0~7<br>绿：G0~7<br>蓝：B0~7<br>全零即纯黑；全一即全白；红绿蓝分别为全一即对应红绿蓝三种颜色。</p><p>2.灰度<br>红绿蓝三种颜色灰度就是对应8bit二进制数据从全零开始进行二进制加法，逐渐从全零加到全一的过程，数据越大则色彩越鲜艳。</p><p>特殊的，白色的灰度是三个数据同时从全零开始加到全一的过程。</p><p>二、下午在和海东哥拆装测试88寸整机。<br>更换外壳，由铁质变为铝质，测量铁质外壳15kg，铝质外壳5kg</p><p>结构外侧内部螺母为压铆螺母工艺<br>但加工质量不太行，在装机的时候螺母脱落一个<br>解决过程：拆机更换为备用铝质外壳</p><p>维修窗口内框为点焊工艺，备用铝质外壳板卡维修窗口框点焊脱落两点<br>解决过程：使用胶布对窗口边框进行加固（后续安装过程中又脱落一个焊点）</p><p>完成安装第一次连接HDMI，未识别出显示器<br>解决过程：<br>1.更换HDMI线，无反应<br>2.用遥控器调试发现未退出老化模式<br>使用遥控器，三下上，三下下解锁屏幕后正常显示，但连接HDMI后发现花屏<br>3.拆开板卡维修窗口，打算直接连接板卡，测试是否是板卡问题，发现HDMI线松动。<br>4.固定完确保没有松动后依然花屏，但是在未连接HDMI时显示正常，应当排除OC与板卡问题。<br>5.调整屏幕分辨率为19：2后解决问题。推测可能是分辨率与88寸屏幕不兼容导致频繁的窗口切换，进而会导致花屏。</p><p>做完样机，出测试报告<br>测试设备：<br>410色彩分析仪<br>软件tft test<br>测试内容：<br>1.实物照片<br>2.亮度测试，大屏幕测九个点，根据测试结果可以看出屏幕中心亮度最高，当中心亮度最高，周围亮度均匀时，视觉效果最好。<br>3.结构说明<br>4.重量<br>5.外形尺寸<br>6.对外接口<br>其他概念<br>均匀度：纯白画面下，亮度最小值除以亮度最大值<br>对比度：纯白画面除以纯黑画面（其实就是显示最高亮度除以显示最低亮度）</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【工作日记DAY04】郑州七号线车载乘客信息显示系统实验大纲（EMC电磁兼容测试）</title>
+      <link href="/posts/7fb73b6d.html"/>
+      <url>/posts/7fb73b6d.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一、GB国标是什么样的？如何寻找下载国标文件？<br>1.直接进国家标准全文公开库，如果能直接下载，则直接下载。<br>2.doc88.com可以在线阅读标准，但是下载付费。</p><p>找到国标文件对应网址<br>GB/T 17626：<a href="https://www.doc88.com/p-69216932534868.html">https://www.doc88.com/p-69216932534868.html</a><br>GB/T 25119：<a href="https://www.doc88.com/p-7902592338414.html">https://www.doc88.com/p-7902592338414.html</a></p><p>目标更新—阅读GB/T 17626</p><p>二、POP，QPP之间具体的区别到底是什么，什么情况要用POP，什么情况要用QPP，QPP既然能够提亮，那么它究竟能提亮多少呢？？<br>客户对亮度会有哪些要求？</p><p>三、实验等级classA是什么意思？<br>判定等级有两个，classA和classB<br>在测试的时候，EMI的辐射和传导在接收机上有两个上限，分别代表ClassA和ClassB，如果观察的波形超过B的线但是低于A的线，那么产品就是A类的。 </p><p>那classA和classB哪个更加严格呢？<br>ClassA产品一般是用于工业，室外环境的产品。<br>ClassB产品一般是用于民用，室内环境的产品。<br>民用的要比工业的严格，工业用的允许辐射稍微大一点。<br>其实最主要还是考虑设备的使用环境：<br>class A的产品干扰要求低一些，但是抗扰度就要求严格一些。<br>class B的产品干扰要求严格，但是抗干扰要求相对就低一些。</p><p>我没有在BG文件里找到关于评判classA和classB标准的文件，这些标准的数据具体是什么？<br>具体标准在所给world中都有，可以和国标文件对照一下看看是否准确。</p><p>下午跟着沛姐参加了一下关于供应商的不良反馈处理会议<br>供应商存在的问题：<br>1.无承认书，承认书类似一个合格标准，即满足那些标准才算合格<br>2.无测量样，这块内容应当包含在承认书之中<br>3.螺丝孔和结构有划伤；毛刺；污脏；异色；凹坑<br>4.PCB有脏污；漏铜；锡珠；垫块偏移<br>5.内标签生产日期与外标签生产日期不一致</p><p>标称电压规定的上下极限情况下正常工作（0.7Un~1.25Un）</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【工作日记DAY03】规格书TS430H1</title>
+      <link href="/posts/d43f4cb7.html"/>
+      <url>/posts/d43f4cb7.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 class="custom-title">一、Pixel pitch我看三个文档数值都不一样，我们这边具体有哪些参数？参数不一样会产生哪些不同的视觉效果？是我们帮客户选吗？具体需要如何决定这个参数？</h1>客户主要是选择显示器的大小和分辨率，这两个数据反向决定了Pixel pitch的大小。因为确定了分辨率之后，像素个数就确定了，随后显示区域越大则Pixel pitch越大，这块数据是不需要客户来确定的，是由OC本身的物理属性决定的。#Display Mode = Transmissive Mode，主要分为两种， Normallly Black 和Normallly white ，即在液晶屏不通电的情况下显示屏显示黑色还是白色。<h1 class="custom-title">二、 有些规格书上重量为什么是TBD？</h1>因为我们在和厂家沟通时，出具规格书是分阶段性的。在前期的沟通过程中，有些数据是不确定的，就比如整机最后的重量，这需要最后样品做出来后进行测量才能出具到规格书上。同样类似的参数还有第六章的亮度和色坐标。因此，初版规格书上某些数据会用TBD替代。#Surface Treatment--表面处理，由BOC厂家确定，主要有雾化度（1%，25%）和硬度（H洛氏硬度（Rockwell Hardness，HR）符号：HRC、HRB、HRA 等（H 代表硬度，后缀字母表示测试条件））LED灯条，灯条具体数目不确定，需要看最后亮度需求决定。<h1 class="custom-title">三、ABSOLUTE MAXIMUM RATINGS中的一些后缀</h1>VDD：正电源VSS：负电源Ta：Ambient Temperature,环境温度T(OP):Ambient Temperature工作温度T（SUR）:Surface Temperature表面温度T（ST）：Storage Temperature存储温度H（op）：Operating Humidity工作湿度H（st）：Storage Humidity存储湿度ELECTRICAL SPECIFICATIONSTFT LCD Open CellIDD:电源电流VRP:电源波纹电压IRUSH:浪涌电流VLVTH:差分输入高电平阈值电压差分输入高电平阈值电压。是差分输入信号中，作为“逻辑高”判定的最小电压差。VLVTL:差分输入低电平阈值电压差分输入低电平阈值电压。是差分输入信号中，作为“逻辑低”判定的最大电压差｜VID｜:输入差分电压。指的是两个输入端之间的电压差。VLVC:共模输入电压在差分信号中，两个输入端的电压差为差分电压，而共模输入电压是它们的平均值。VIH:输入高电平阈值电压。指输入信号被判定为高电平的最小电压值。VIL:输入低电平阈值电压。指输入信号被判定为低电平的最大电压值。PDD:电源功耗Backlight UnitVPIN：每个pin脚输入电压IPIN：每个pin脚输入电流PBL：电力消耗FPWM：PWM控制频率<h1 class="custom-title">四、一些未解决的问题</h1><p>The backlight unit contains 2pcs LED light bar, and each light bar has 6 stringLED<br>Connector type:6P-PH2.0</p><p>Light-bar FeedbackChannel反馈会反馈些什么呢？</p><p>PIN脚里的NC是什么—-NO CONNECT</p><p>LVDS中为什么会有两个供电的PIN脚？？是因为有两个灯带吗？</p><p>为什么叫N1，N2？symbol是标注在PCB板上的丝印吗？</p><p>forward voltage—正向电压</p><p>Odd pixel NegativeLVDS<br>differential datainput.</p><p>Odd pixel PositiveLVDS<br>differential datainput.</p><p>Even pixel NegativeLVDS<br>differential datainput.<br>这个为什么要分这个奇偶输入呢？？</p><hr><p>LVDS Receiver : Timing Controller (LVDS Rx merged) / LVDS Data : PixelData</p><p><OpenCellInputConnectorPinConfiguration>时序这块没看懂。。。第四章除了PIN口都没看懂。</p><h2 id="power-sequencer—-电源顺序器：一种用于控制设备上电顺序的电子设备，通常用于保护敏感设备免受电源波动的影响"><a href="#power-sequencer—-电源顺序器：一种用于控制设备上电顺序的电子设备，通常用于保护敏感设备免受电源波动的影响" class="headerlink" title="power sequencer—-电源顺序器：一种用于控制设备上电顺序的电子设备，通常用于保护敏感设备免受电源波动的影响"></a>power sequencer—-电源顺序器：一种用于控制设备上电顺序的电子设备，通常用于保护敏感设备免受电源波动的影响</h2><p>第五章，上电顺序<br>latch-up和DC operation分别是什么，会对OC造成什么样的危害？？（To prevent a latch-up or DC operation of the Open Cell, the poweron/off sequence shall be as shown inbelow）</p><p>第六章，光学规格<br>optical specifications<br> a viewing angle of θ and Φ equal to 0°，这里的θ和Φ是什么角度？？</p><p> 色坐标的典型值是由什么东西决定的？？</p><p> 反应时间的图没有看懂。</p><p> 第七章，标签规格</p><p> 第八章，打包</p><p> 第九章，机械规格</p><p> 第十章，注意事项<br> ,do not lose CLK, ENAB signals，这里的CLK和ENAB信号是什么，为什么失去其中一个会对仪器造成损害？？</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【工作日记DAY02】产品规格参数的理解</title>
+      <link href="/posts/da0a5b02.html"/>
+      <url>/posts/da0a5b02.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><p>一、接DAY02,各项指标理解</p><p>1.解析度（resolution）<br>其实就是分辨率<br>需要区分一下pixel和dot，pixel我理解的是一个包含三个子像素（RGB）的模块，而dot就单指一颗发光像素，pixel包含dot</p><p>2.颜色深度（color deepth）<br>这里面bit是什么？<br>颜色深度中的 bit 表示每个像素（Pixel）用多少二进制位来描述颜色：<br>1 bit：只能表示 2 种颜色（黑和白）。<br>8 bit：每个像素用 8 位表示，可组合出2的8次方=256 种颜色<br>24 bit：通常分为 RGB 三通道各 8 bit，总颜色数为2的24次方</p><p>3.对比度（CR、contrast ratio）<br>CR=最大亮度除以最小亮度nits</p><p>华启主要是做轨道交通pis即乘客信息服务系统，是我司的主营客户<br>触摸屏故障表现为-<br>通电屏闪<br>触摸对角镜像（即图标在左上角，需要触摸右下角才能触发对应功能）<br>解决方法：使用烧录器对固件进行更新或重刷</p><p>此外，还对华启与我司高频对接的部门进行参观，包括<br>1.一楼与二楼项目经理与系统工程处<br>2.一楼电磁兼容实验室，认识了两位工程师时工与尤工；同时参观了一些实验设备-<br>静电放电（ESD）模拟器：模拟人体或物体静电放电，测试设备抗静电能力。<br>电快速瞬变脉冲群（EFT）发生器：模拟电网切换引起的脉冲干扰，评估设备电源端口的抗扰度。<br>雷击浪涌发生器：产生高能浪涌电压/电流（如1.2/50μs波形），测试设备抗雷击能力。<br>高温老化试验箱：提供恒定高温环境，测试电子元件在长期高温下的性能<br>盐雾腐蚀试验箱：模拟海洋或工业污染环境，评估材料耐腐蚀性。<br>恒温恒湿试验箱：控制温湿度，测试材料膨胀、收缩或吸湿性影响。<br>动态模拟平台<br>原理：通过液压或电动驱动系统，模拟高铁在不同运行状态下的摇晃、颠簸和加速度变化，例如启动、制动、转弯等动作16。<br>应用场景：通常与高铁模拟舱结合使用，增强训练的沉浸感，帮助乘务员熟悉实际行车环境中的身体平衡和应急操作。</p><h2 id="实操部分·拆解了公司做的产品"><a href="#实操部分·拆解了公司做的产品" class="headerlink" title="实操部分·拆解了公司做的产品"></a>实操部分·拆解了公司做的产品</h2><p>设备自上向下分为七层<br>外壳<br>OC<br>扩散片<br>POP<br>扩散片<br>导光板<br>垫片<br>其中OC模块主要结构是DAY01学习的内容；pop看着像镭射片，主要是用于增加显示亮度，这一层还有其他的材质，例如QPP，QPP的增亮能力稍微大于POP。<br>设备采用英寸制，换算方法为mm/25.4<br>OC使用的是BOE的(京东方)，我司会根据客户要求，对OC、板卡等进行选型；进行外框结构设计后委托厂家进行生产；最后完成组装成为一块显示模块或者一体机</p><h2 id="了解了一下公司主要运行的模式"><a href="#了解了一下公司主要运行的模式" class="headerlink" title="了解了一下公司主要运行的模式"></a>了解了一下公司主要运行的模式</h2><p>产品经理联系客户，确定需求，出具规格书交给研发<br>研发根据规格书进行设计，做样机，确定批量方案<br>生产根据批量方案进行生产。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>【工作日记DAY01】TFT/LCD产品特性学习</title>
+      <link href="/posts/c8d460d9.html"/>
+      <url>/posts/c8d460d9.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="\assets\js\Meting.min.js"></script><h1 class="custom-title">一、简介</h1>TFT LCD全称：Thin-Film Transistor Liquid Crystal Display，薄膜晶体管液晶显示屏。是一种采用薄膜晶体管（TFT）技术来控制液晶像素的液晶显示屏（LCD）<br><br>1. TFT LCD 的基本工作原理<br>1.1 LCD（液晶显示）的核心概念  <br>TFT LCD 属于 主动矩阵液晶显示技术，其基本原理依赖于 液晶（Liquid Crystal） 的特性。液晶是一种介于固态和液态之间的物质，它的分子排列可以受到电场的影响，从而改变通过它的光的偏振方向。 <br> <br>1.2 TFT LCD 的核心组成<br>TFT LCD 主要由以下几层结构组成：<br>背光源（Backlight）：提供光源，因为液晶本身不会发光。<br>偏振片（Polarizer）：调整光的偏振方向。<br>TFT 层（薄膜晶体管层）：为每个像素提供单独的控制电路。<br>液晶层（Liquid Crystal Layer）：通过电场控制光的透过量，形成不同的亮度和颜色。彩色滤光片（Color Filter）：由红（R）、绿（G）、蓝（B）三种颜色的子像素组成，实现全彩显示。<br><br>2. TFT 的作用<br>TFT（Thin-Film Transistor）是一种特殊的 场效应晶体管（FET），它被制作在玻璃基板上，并用于单独控制每个像素的通断。每个像素点都由一个 TFT 管控制，因此：<br>响应速度更快，画面切换流畅。<br>色彩更稳定，不会出现鬼影或拖影。<br>精确控制亮度，提高对比度。<br>在 TFT LCD 中，每个像素包含 3 个子像素（R、G、B），每个子像素都由一个独立的 TFT 控制。TFT 的作用是 开关像素的通断，并控制液晶旋转的角度，从而决定光线的透射量，实现不同的颜色和亮度变化。<br><br>3. TFT LCD 的工作过程<br>3.1 主要步骤<br>背光源发光（通常是 LED 背光）。<br>光线通过第一个偏振片，变成单一偏振方向的光。<br>TFT 控制液晶层的状态：<br>施加电压时，液晶分子会改变排列方向，影响光的透过率。<br>不施加电压时，液晶维持原来的状态，光线无法通过。<br>光线通过彩色滤光片，形成红、绿、蓝 3 种颜色的像素点。<br>光线经过第二个偏振片和玻璃层，最终形成可见图像。<br><br>4. TFT LCD 的优点<br>✅ 响应速度快：比传统的被动矩阵 LCD（如 STN-LCD）快得多，不容易出现残影或拖影。<br>✅ 高对比度和亮度：由于像素可以独立控制，显示效果更清晰。<br>✅ 色彩丰富：TFT LCD 能够显示更广的色域，适合多媒体应用。<br>✅ 适用于大尺寸显示屏：TFT 技术可以应用于不同尺寸的屏幕，包括手机、电脑、电视等。<br><br>5. TFT LCD 的缺点<br>❌ 功耗较高：因为每个像素都有独立的 TFT 开关，功耗比传统 LCD 略高。<br>❌ 制造成本较高：需要复杂的半导体制造工艺。<br>❌ 可视角度较小（部分型号）：早期的 TFT LCD 屏幕在斜角观看时颜色会发生变化，不过现在的 IPS 技术已经改善了这一问题。<br><br><br><br><h1 class="custom-title">二、TFT LCD 显示器的应用分类</h1><br>1. Projection Transistor（投影型晶体管显示）<br>这一类型主要用于 投影显示设备，如 LCD 投影仪。它的工作方式如下：<br>使用高亮度光源透射通过 TFT LCD 面板。<br>光经过 放大镜头系统，被投影到更大的屏幕上。<br>主要用于 投影仪、虚拟现实（VR）头显、商业显示系统 等。<br><br>优点：<br>✅ 能够投影到大型屏幕，适用于会议、影院、教育场景。<br>✅ 分辨率高，适合高清画面呈现。<br>✅ 颜色表现较好，能够提供较高的对比度。<br><br>缺点：<br>❌ 需要额外的光源，功耗较大。<br>❌ 设备体积较大，不如便携式显示器灵活。<br><br>2. Direct View Type（直视型）<br>这是最常见的 TFT LCD 类型，应用于手机、笔记本电脑、电视、显示器等设备。<br>采用 背光源（LED 背光或 CCFL 背光） 提供光源。<br>通过 TFT 控制液晶排列 以调整光线透过率，从而显示画面。<br>适用于 日常电子设备，如智能手机、电脑屏幕、电视、平板 等。<br><br>优点：<br>✅ 画面清晰、色彩丰富，适合日常使用。<br>✅ 分辨率可以做得很高，支持 4K、8K 显示。<br>✅ 生产工艺成熟，成本较低。<br><br>缺点：<br>❌ 需要背光，功耗较高。<br>❌ 可视角度可能较小（但 IPS 面板可改进此问题）。<br><br>3. Reflective Type（反射型）<br>这一类型的 TFT LCD 不需要背光，而是利用外部环境光反射 来形成图像。<br>采用 反射板（Reflective Layer），光线从环境进入 LCD 层，然后反射回用户眼睛。<br>主要用于 低功耗设备，如电子书（E-Ink 之外的 LCD 方案）、部分手表、工业仪表 等。<br><br>优点：<br>✅ 超低功耗，适合长时间显示内容的设备。<br>✅ 强光下可视性好，在户外阳光下依然清晰可见。<br><br>缺点：<br>❌ 颜色较暗淡，色彩表现较差。<br>❌ 在光线不足的环境下可读性差（因为没有背光）。<br><br>4. Trans-Reflective Type（半透半反型）<br>这种类型结合了 直视型（Direct View）和反射型（Reflective） 的特点，既可以使用背光，也可以反射环境光。<br>在亮光环境下，依靠 环境光反射 来节能。<br>在黑暗环境下，使用 背光 来显示内容。<br>主要用于 智能手表、户外仪器、GPS 导航设备 等。<br><br>优点：<br>✅ 在强光环境下表现优秀，适合户外使用。<br>✅ 结合了直视型和反射型的优势，可在不同光照条件下提供较好的可视性。<br>✅ 功耗较低，比普通直视型 LCD 更省电。<br><br>缺点：<br>❌ 对比度较低，显示效果可能不如直视型 LCD。<br>❌ 生产成本比普通 LCD 稍高。<br><br><h1 class="custom-title">三、TFT LCD的scan line 和 data line 是如何工作的？</h1><p>3.1结构</p><p>在 TFT LCD（薄膜晶体管液晶显示屏） 中，每个像素 由一个 TFT（薄膜晶体管）开关 控制，而这些像素是按照行（Row）和列（Column）排列的，形成一个 像素矩阵（Pixel Matrix）。</p><p>Scan Line（扫描线）：连接到行驱动电路（Row Driver）控制哪一行的像素被激活（选通）。</p><p>Data Line（数据信号线）：连接到列驱动电路（Column Driver）提供该行每个像素的颜色（R/G/B）和亮度数据。</p><p>TFT LCD 的像素矩阵结构<br>每个像素由 TFT 开关 + 液晶单元 + 存储电容 组成，如下图所示：</p><p> ┌───────────────────────┐<br> │   Data Line (列)      │<br> ├─┬─────┬─────┬─────┬──┤<br> │ │ TFT │ TFT │ TFT │  │   ← 第 1 行（Scan Line 1）<br> │ ├─────┼─────┼─────┤<br> │ │ TFT │ TFT │ TFT │  │   ← 第 2 行（Scan Line 2）<br> │ ├─────┼─────┼─────┤<br> │ │ TFT │ TFT │ TFT │  │   ← 第 3 行（Scan Line 3）<br> └─┴─────┴─────┴─────┴──┘</p><p>3.2协同工作流程以及示例<br>TFT LCD 采用逐行扫描（Row Scanning）的方式来更新屏幕上的图像。</p><p>工作流程：<br>1.扫描线（Scan Line）逐行开启像素<br>只有被选中的那一行的 TFT 开关打开，允许该行的像素接收数据。<br>其他行的 TFT 开关关闭，不会受到影响。</p><p>2.数据线（Data Line）传输颜色数据<br>列驱动电路会把 R/G/B 信号 送到当前被选中的行的每个像素。<br>这个数据代表该像素的亮度（灰阶）或颜色（RGB 组合）。</p><p>3.电压存储在像素电容中<br>每个像素都有一个小电容，负责存储电压，以便在下一次刷新前保持画面不变。<br>当 TFT 关闭时，电容保持电荷，液晶状态保持不变。</p><p>4.扫描下一行<br>当前行写入完成后，扫描电路选择下一行，重复上述过程，直到所有行都更新完毕。</p><p><h1 class="custom-title">四、为什么会有两层偏光板？CF?LC cell？</h1></p><ol><li>背光层（Backlight / Light Guide，导光板）<br>光线状态：未偏振的白光<br>光源：通常是 LED 背光（白色光）。</li></ol><p>作用：<br>提供均匀的白色光源。<br>通过导光板（Light Guide）和扩散层（Diffuser）均匀分布光线，避免亮度不均匀。</p><p>光线变化：<br>初始光线是无偏振的，即光的振动方向是随机的。<br>颜色是白色（RGB 光的混合）。</p><p>2.下偏光片（Polarizer）<br>光线状态：线偏振的白光<br>作用：<br>让未偏振的光变成线偏振光（振动方向统一）。</p><p>光线变化：<br>只有与偏光片方向一致的光可以通过，其他方向的光被吸收。<br>结果是线偏振白光（仍然是白色，但方向固定）。</p><p>3.TFT + LC Cell（液晶层）<br>光线状态：偏振方向被调制的白光<br>TFT（薄膜晶体管）：<br>TFT 作为开关，决定是否对该像素施加电压。</p><p>LC Cell（液晶层）：<br>通过电压调节液晶分子的排列，从而控制光的偏振方向。</p><p>无电压时：<br>液晶分子呈螺旋状排列，使光线的偏振方向旋转 90°。</p><p>施加电压时：<br>液晶分子被拉直，不改变光的偏振方向。</p><p>光线变化：<br>偏振方向可能旋转 0°~90°，决定了最终透光量（亮度）。</p><p>4.CF（Color Filter，彩色滤光片）<br>光线状态：RGB 颜色 + 偏振方向已调制<br>作用：<br>过滤出所需的颜色（R / G / B）。</p><p>光线变化：<br>通过 R / G / B 子像素，只允许某个颜色的光通过。</p><p>例如：<br>如果像素应该是红色，那么只允许红光通过，吸收绿光和蓝光。</p><p>5.上偏光片（Polarizer）<br>光线状态：最终透射量决定亮度<br>作用：<br>进一步控制光线的通过量，形成最终的像素亮度。</p><p>光线变化：<br>如果液晶旋转了 90°，光的偏振方向与上偏光片一致，光线可以通过（像素亮）。<br>如果液晶未旋转光的方向，光线被吸收（像素暗）。<br>通过调节旋转角度（0°-90°），控制亮度等级（灰阶）。</p><p>6.结果：彩色像素形成最终图像<br>每个像素由 RGB 三个子像素 组成。<br>通过调整每个子像素的亮度，混合出不同的颜色。<br>最终的图像出现在 LCD 屏幕上。<br><br></p><p><h1 class="custom-title">五、TFT-LCD信号输入原理是怎样的？（跳过，明天看）</h1></p><p><h1 class="custom-title">六、TFT-LCD产品规格特性</h1><br>规格汇总：以M170E5-L05为例<br>Size—————————尺寸<br>Color depth—————-色彩深度<br>Resolution——————解析度<br>Contrast ratio————对比<br>Brightness——————亮度<br>Viewing angle————-可视角<br>Response Time————-反应时间<br>Backlight——————-灯管数<br>Power Consumption——-耗电量<br>Signal input—————输入信号模式</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Pirrow】学习笔记-FL studio制作Phonk时对于cow bell音色的调整</title>
       <link href="/posts/f9d6b6fc.html"/>
       <url>/posts/f9d6b6fc.html</url>
